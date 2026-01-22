@@ -1,4 +1,0 @@
-https://www.dicebear.com/ -> for getting random pics
-
-https://api.dicebear.com/7.x/avataaars/svg?seed=boy-${Math.random()}  -> for boy pfp
-https://api.dicebear.com/7.x/avataaars/svg?seed=girl-${Math.random()} -> for girl pfp

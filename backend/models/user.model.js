@@ -23,8 +23,8 @@ const userSchema = new mongoose.Schema({
         required: false,
         default: ""
     }
-})
+}, {timestamps: true})
 
 const User = mongoose.model('User', userSchema)
-                    //collection name will become: 'users' by mongoose
+//UserModel is for using in backend   collection name will become: 'users' by mongoose but model name will be User in database
 export default User
