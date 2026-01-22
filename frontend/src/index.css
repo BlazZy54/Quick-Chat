@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/background-img3.jpg"); 
+  background-size: cover;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
