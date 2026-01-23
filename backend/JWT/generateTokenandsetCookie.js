@@ -11,9 +11,7 @@ const generateTokenandsetCookie = (userId, res) => {
     // {userId: userId} -> Payload: data inside JWT 
     // process.env.JWT_SECRET -> used to sign the token
     // {expiresIn: '7d'} -> valid for 7 days
-
-
-
+    
 
     //setting the token as a cookie stored in user's browser
 

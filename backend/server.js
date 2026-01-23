@@ -8,6 +8,7 @@ import dotenv from "dotenv"
 import authRoutes from "./routes/auth.routes.js"
 import messageRoutes from "./routes/message.routes.js"
 import userRoutes from "./routes/user.routes.js"
+import verifycookieRoutes from "./routes/verifycookie.routes.js"
 
 
 const app = express()
@@ -21,7 +22,7 @@ app.use(cookieParser()) //reads cookies from incoming HTTP requests and makes th
 app.use('/api/auth',authRoutes)
 app.use('/api/messages', messageRoutes)
 app.use('/api/user', userRoutes)
-
+app.use('/api/verifycookie', verifycookieRoutes)
 
 
 app.listen(PORT, () => {

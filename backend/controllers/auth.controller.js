@@ -46,6 +46,7 @@ export const login = async (req, res) => {
 
         if (!user || !ispasswordValid) return res.status(400).json({ error: "Invalid username or password" })
 
+        //GENERATE JWT TOKEN and set it as Cookie
         generateTokenandsetCookie(user._id, res) //generate JSON for cookie 
 
         return res.status(200).json({

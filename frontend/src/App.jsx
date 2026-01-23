@@ -1,17 +1,36 @@
-import Home from "./pages/Home"
-import Login from "./pages/Login"
-import Signup from "./pages/Signup"
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from "./Pages/Home"
+import Login from "./Pages/Login"
+import Signup from "./Pages/Signup"
+import React, { useEffect } from 'react'
+import { useState } from 'react'
+import {authStore} from "./ZustandStore/store.js"
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+
 
 function App() {
+  const {authUser, setauthUser} = authStore() //authenticated or not
+
+  const useverifyCookie = async () => {
+    const res = await fetch('/api/verifycookie')
+    const data = await res.json()
+    setauthUser(data.status)
+    console.log(data.status)
+  }
+
+    useEffect(()=>{
+      useverifyCookie()
+  },[])
+  
 
   return (
     <>
+    <Toaster/>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/signup' element={<Signup/>} />
-          <Route path='/home' element={<Home/>} />
+          <Route path='/login' element={authUser ? <Navigate to='/'/> : <Login/>} />
+          <Route path='/signup' element={authUser ? <Navigate to='/'/> : <Signup/>} />
+          <Route path='/' element={!authUser ? <Navigate to='/login'/> : <Home/>} />
         </Routes>
       </BrowserRouter>
     </>
