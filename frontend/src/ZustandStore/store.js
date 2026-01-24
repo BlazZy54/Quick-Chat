@@ -4,6 +4,6 @@ export const authStore = create((set) => ({
     authUser: false,
     setauthUser: (isauth) => {
         set({authUser: isauth})
-        console.log("ff"+isauth)
+        console.log("inside store"+isauth)
     }
 }))

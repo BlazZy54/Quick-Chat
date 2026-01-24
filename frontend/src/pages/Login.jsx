@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import useLogin from "../Hooks/useLogin";
+
 
 const Login = () => {
-  
+  const [inputs, setInputs] = useState({username: '', password: ''})
+
+  const {loading, login} = useLogin()
+
+  const handleLogin = async () => {
+    await login(inputs.username, inputs.password)
+    setInputs({username: '', password: ''})
+  }
+
   return (
     <div
       className="h-screen flex items-center justify-center p-[5vw]"
@@ -19,6 +30,7 @@ const Login = () => {
               type="text"
               placeholder="Enter username"
               className="w-full mt-1 px-3 py-2 rounded-md bg-black/30 border border-white/20 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={inputs.username} onChange={e => setInputs({...inputs, username: e.target.value})}
             />
           </div>
 
@@ -28,6 +40,7 @@ const Login = () => {
               type="password"
               placeholder="Enter Password"
               className="w-full mt-1 px-3 py-2 rounded-md bg-black/30 border border-white/20 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={inputs.password} onChange={e => setInputs({...inputs, password: e.target.value})}
             />
           </div>
 
@@ -35,8 +48,10 @@ const Login = () => {
             Don’t have an account?
           </Link>
 
-          <button className="w-full mt-2 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">
-            Login
+          <button className="w-full mt-2 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition"
+           onClick={handleLogin} disabled={loading}
+          >
+            {loading? "Please wait..." : "LogIn"}
           </button>
         </div>
       </div>

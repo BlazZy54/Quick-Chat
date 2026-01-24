@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import toast from 'react-hot-toast'
+import { authStore } from '../ZustandStore/store'
 
 const useSignup = () => {
     const [loading, setloading] = useState(false)
-
+    const { setauthUser } = authStore()
 
     const signup = async (inputs) => {
 
@@ -24,9 +25,10 @@ const useSignup = () => {
             const data = await res.json()
 
             if (data.error) throw new Error(data.error) //will get catched
+            
+            setauthUser(true)
 
             toast.success('Account created successfully')
-
         }
         catch (error) {
             toast.error(error.message)

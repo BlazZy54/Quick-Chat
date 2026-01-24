@@ -31,6 +31,7 @@ const Signup = () => {
     await signup(inputs)
     setInputs({fullName: '', username: '', password: '', confirmPass: '', gender: ''})
     setChecks({Male: false, Female: false, Other: false})
+
   }
 
   return (
