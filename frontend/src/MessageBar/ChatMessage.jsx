@@ -1,13 +1,14 @@
 import getTime from "../emojisandtime/getTime";
-import { authStore } from "../ZustandStore/store";
+import { authStore, conversationStore } from "../ZustandStore/store";
 
 
 const ChatMessage = ({msg}) => {
   const {authUser} = authStore()
+  const {selectedConversation} = conversationStore()
 
   const fromMe = authUser.id === msg.senderId
-  const calculatedTime = getTime(msg.updatedAt)
 
+  const calculatedTime = getTime(msg.updatedAt)
 
   return (
     <div className={`flex ${fromMe ? 'justify-end' : 'justify-start'} items-end gap-2 mb-3 mt-2 relative`}>
@@ -27,13 +28,12 @@ const ChatMessage = ({msg}) => {
       </div>
 
      
-      <div
+      <img
+      src={fromMe ? authUser.profilePic : selectedConversation.profilePic}
         className={`h-8 w-8 rounded-full
                    bg-white/20 border border-white/30
                    flex items-center justify-center absolute ${fromMe ? 'right-1' : 'left-1'}`}
-      >
-        👤
-      </div>
+      />
     </div>
   );
 };
