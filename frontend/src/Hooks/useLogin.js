@@ -21,7 +21,7 @@ const useLogin = () => {
 
             if(data.error) throw new Error(data.error)
 
-            setauthUser(true)
+            setauthUser(data.user)
 
             toast.success("Logged In successfully")
         }

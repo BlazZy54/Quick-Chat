@@ -4,7 +4,7 @@ import { authStore } from '../ZustandStore/store'
 
 const useSignup = () => {
     const [loading, setloading] = useState(false)
-    const { setauthUser } = authStore()
+    const {setauthUser } = authStore()
 
     const signup = async (inputs) => {
 
@@ -26,7 +26,7 @@ const useSignup = () => {
 
             if (data.error) throw new Error(data.error) //will get catched
             
-            setauthUser(true)
+            setauthUser(data.user)
 
             toast.success('Account created successfully')
         }

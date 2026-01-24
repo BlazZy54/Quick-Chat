@@ -16,7 +16,7 @@ const useLogout = () => {
             const data = await res.json()
             if(data.error) throw new Error(data.error)
 
-            setauthUser(false)
+            setauthUser(null)
             
             toast.success("Logged out successfully")
         }

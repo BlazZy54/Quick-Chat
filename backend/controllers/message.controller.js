@@ -49,7 +49,7 @@ export const getMessage = async (req, res) => {
         // in Coversation schema i did "ref" to Message model name     messages: [{type: mongoose.Schema.Types.ObjectId,ref: "Message",default: [],}]
         // so it will give us array of messages objects
 
-        if(!conversation) res.status(400).json({error: "Conversation does not exist"})
+        if(!conversation) res.status(200).json([]) 
 
         const messages = conversation.messages
         res.status(200).json(messages)

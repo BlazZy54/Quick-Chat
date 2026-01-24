@@ -11,15 +11,14 @@ import { Toaster } from 'react-hot-toast';
 function App() {
   const {authUser, setauthUser} = authStore() //authenticated or not
 
-  const useverifyCookie = async () => {
+  const verifyCookie = async () => {
     const res = await fetch('/api/verifycookie')
     const data = await res.json()
-    setauthUser(data.status)
-    console.log(data.status)
+    setauthUser(data.user)
   }
 
     useEffect(()=>{
-      useverifyCookie()
+      verifyCookie()
   },[])
   
 
