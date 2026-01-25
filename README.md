@@ -99,8 +99,6 @@ npm install --prefix frontend
 
 ## 📸 Screenshots
 
-> Add these screenshots in a folder named `screenshots/` in your repo:
-
 ### 🔐 Login
 ![Login](screenshots/login.png)
 
