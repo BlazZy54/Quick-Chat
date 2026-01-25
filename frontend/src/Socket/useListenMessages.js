@@ -1,7 +1,7 @@
 
 import { conversationStore, socketStore } from '../ZustandStore/store'
 import { useEffect } from 'react'
-import noti_sound from "../sounds/noti_sound.mp3"
+import noti_sound from "../Sounds/noti_sound.mp3"
 
 const useListenMessages = () => {
     const { socket, setSocket } = socketStore()

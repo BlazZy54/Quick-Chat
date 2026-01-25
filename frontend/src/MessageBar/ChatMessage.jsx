@@ -1,4 +1,4 @@
-import getTime from "../emojisandtime/getTime";
+import getTime from "../Emojisandtime/getTime";
 import useListenMessages from "../Socket/useListenMessages";
 import { authStore, conversationStore } from "../ZustandStore/store";
 
