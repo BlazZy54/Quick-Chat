@@ -9,7 +9,7 @@ const useclientSocket = () => {
     useEffect(() => {
         if (authUser) {
             //'io' is used to connect the frontend to your Socket.
-            const socket1 = io('http://localhost:3000', {
+            const socket1 = io('https://quick-chat-j6vv.onrender.com/', {
                 query: {
                     userId: authUser._id
                 }
