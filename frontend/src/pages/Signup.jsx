@@ -42,7 +42,7 @@ const Signup = () => {
       >
 
         <h2 className="text-2xl font-semibold text-center mb-6">
-          SignUp <span className="text-blue-400">Chat-App</span>
+          SignUp <span className="text-blue-400">Quick-Chat</span>
         </h2>
 
         <div className="space-y-4">

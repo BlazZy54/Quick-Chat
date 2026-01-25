@@ -20,7 +20,7 @@ const Login = () => {
       <div className="w-150 p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg text-white">
 
         <h2 className="text-2xl font-semibold text-center mb-6">
-          Login <span className="text-blue-400">Chat-App</span>
+          Login <span className="text-blue-400">Quick-Chat</span>
         </h2>
 
         <div className="space-y-4">
