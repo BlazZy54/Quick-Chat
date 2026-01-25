@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, "/frontend/dist")))  //middleware
 
 if (process.env.NODE_ENV == 'deployment') {
     app.get(/.*/, (req, res) => {
-        res.sendFile(__dirname, "/frontend/dist/index.html")      //serve the builded frontend files
+        res.sendFile(__dirname, "frontend", "dist", "index.html")      //serve the builded frontend files
     })
 }
 
