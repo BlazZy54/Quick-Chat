@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "backend": "nodemon backend/server.js"
+    "backend": "nodemon backend/server.js",
+    "build": "npm intsall && npm install --prefix frontend && npm run build --prefix frontend",
+    "start" : "node backend/server.js"
   },
   "repository": {
     "type": "git",
