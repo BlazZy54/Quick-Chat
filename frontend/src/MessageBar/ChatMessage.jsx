@@ -1,6 +1,6 @@
-import getTime from "../Emojisandtime/getTime";
-import useListenMessages from "../Socket/useListenMessages";
-import { authStore, conversationStore } from "../ZustandStore/store";
+import getTime from "../Emojisandtime/getTime.js";
+import useListenMessages from "../Socket/useListenMessages.js";
+import { authStore, conversationStore } from "../ZustandStore/store.js";
 
 
 const ChatMessage = ({msg}) => {

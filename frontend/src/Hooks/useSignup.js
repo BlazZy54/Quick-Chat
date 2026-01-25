@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import toast from 'react-hot-toast'
-import { authStore } from '../ZustandStore/store'
+import { authStore } from '../ZustandStore/store.js'
 
 const useSignup = () => {
     const [loading, setloading] = useState(false)

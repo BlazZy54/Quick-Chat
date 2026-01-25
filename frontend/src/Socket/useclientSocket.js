@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { authStore, socketStore } from '../ZustandStore/store'
+import { authStore, socketStore } from '../ZustandStore/store.js'
 import { io } from 'socket.io-client'
 
 const useclientSocket = () => {

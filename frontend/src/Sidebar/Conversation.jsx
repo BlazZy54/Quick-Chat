@@ -1,4 +1,4 @@
-import { conversationStore, socketStore } from '../ZustandStore/store'
+import { conversationStore, socketStore } from '../ZustandStore/store.js'
 
 
 const Conversation = ({conversation, emoji}) => {

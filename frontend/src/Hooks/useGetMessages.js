@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { conversationStore } from "../ZustandStore/store"
+import { conversationStore } from "../ZustandStore/store.js"
 import { useEffect } from "react"
 import toast from "react-hot-toast"
 

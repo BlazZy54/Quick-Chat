@@ -1,8 +1,8 @@
 import React from 'react'
-import SidebarContainer from '../Sidebar/SidebarContainer'
-import MessageContainer from '../MessageBar/MessageContainer'
-import EmptyMessageContainer from '../MessageBar/WelcomeMsgContainer'
-import { conversationStore } from '../ZustandStore/store'
+import SidebarContainer from '../Sidebar/SidebarContainer.jsx'
+import MessageContainer from '../MessageBar/MessageContainer.jsx'
+import EmptyMessageContainer from '../MessageBar/WelcomeMsgContainer.jsx'
+import { conversationStore } from '../ZustandStore/store.js'
 
 const Home = () => {
   const {selectedConversation} = conversationStore()

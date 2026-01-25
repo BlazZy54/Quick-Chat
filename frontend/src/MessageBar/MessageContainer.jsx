@@ -1,6 +1,6 @@
-import Header from './Header'
-import ChatSection from './ChatSection'
-import { conversationStore } from '../ZustandStore/store'
+import Header from './Header.jsx'
+import ChatSection from './ChatSection.jsx'
+import { conversationStore } from '../ZustandStore/store.js'
 import { useEffect } from 'react'
 
 

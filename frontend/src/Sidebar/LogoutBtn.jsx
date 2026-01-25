@@ -1,5 +1,5 @@
 import { MdLogout } from "react-icons/md";
-import useLogout from '../Hooks/useLogout';
+import useLogout from '../Hooks/useLogout.js';
 
 
 const LogoutBtn = () => {

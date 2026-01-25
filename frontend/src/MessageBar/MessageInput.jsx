@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BsFillSendFill } from "react-icons/bs";
-import useSendMessage from '../Hooks/useSendMessage';
+import useSendMessage from '../Hooks/useSendMessage.js';
 
 
 

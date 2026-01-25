@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaSearch } from "react-icons/fa";
-import useGetConversation from '../Hooks/useGetConversation';
-import { conversationStore } from '../ZustandStore/store';
+import useGetConversation from '../Hooks/useGetConversation.js';
+import { conversationStore } from '../ZustandStore/store.js';
 import toast from 'react-hot-toast'
 
 

@@ -1,5 +1,5 @@
 
-import { conversationStore, socketStore } from '../ZustandStore/store'
+import { conversationStore, socketStore } from '../ZustandStore/store.js'
 import { useEffect } from 'react'
 import noti_sound from "../Sounds/noti_sound.mp3"
 

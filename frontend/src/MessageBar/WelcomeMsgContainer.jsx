@@ -1,4 +1,4 @@
-import { authStore } from "../ZustandStore/store";
+import { authStore } from "../ZustandStore/store.js";
 
 
 

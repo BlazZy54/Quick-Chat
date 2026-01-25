@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import ChatMessage from './ChatMessage'
-import MessageInput from './MessageInput'
-import useGetMessages from '../Hooks/useGetMessages'
-import ChatSkeleton from "./ChatSkeleton"
+import ChatMessage from './ChatMessage.jsx'
+import MessageInput from './MessageInput.jsx'
+import useGetMessages from '../Hooks/useGetMessages.js'
+import ChatSkeleton from "./ChatSkeleton.jsx"
 import { useEffect } from 'react'
 
 const ChatSection = () => {

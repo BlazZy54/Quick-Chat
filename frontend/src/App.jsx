@@ -1,6 +1,6 @@
-import Home from "./Pages/Home"
-import Login from "./Pages/Login"
-import Signup from "./Pages/Signup"
+import Home from "./Pages/Home.jsx"
+import Login from "./Pages/Login.jsx"
+import Signup from "./Pages/Signup.jsx"
 import React, { useEffect } from 'react'
 import {authStore} from "./ZustandStore/store.js"
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';

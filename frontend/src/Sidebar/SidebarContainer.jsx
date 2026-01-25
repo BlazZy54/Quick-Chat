@@ -1,8 +1,8 @@
 import React from 'react'
-import SearchInput from './SearchInput'
-import Conversation from './Conversation'
-import LogoutBtn from './LogoutBtn'
-import useGetConversation from '../Hooks/useGetConversation'
+import SearchInput from './SearchInput.jsx'
+import Conversation from './Conversation.jsx'
+import LogoutBtn from './LogoutBtn.jsx'
+import useGetConversation from '../Hooks/useGetConversation.js'
 import getRandomActivityEmoji from '../emojisandtime/getEmojis.js'
 
 

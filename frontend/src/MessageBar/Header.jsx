@@ -1,4 +1,4 @@
-import { conversationStore } from '../ZustandStore/store'
+import { conversationStore } from '../ZustandStore/store.js'
 
 const Header = () => {
   const {selectedConversation} = conversationStore()
