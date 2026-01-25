@@ -28,7 +28,7 @@ export const signup = async (req, res) => {
 
         return res.status(201).json({
             status: true, message: "User created successfully",
-            user: { id: newuser._id, fullName: newuser.fullName, username: newuser.username, profilePic: newuser.profilePic }
+            user: { _id: newuser._id, fullName: newuser.fullName, username: newuser.username, profilePic: newuser.profilePic }
         })
     }
     catch (error) {
@@ -51,7 +51,7 @@ export const login = async (req, res) => {
 
         return res.status(200).json({
             status: true, message: "Logged in successfully",
-            user: { id: user._id, fullName: user.fullName, username: user.username, profilePic: user.profilePic }
+            user: { _id: user._id, fullName: user.fullName, username: user.username, profilePic: user.profilePic }
         })
 
     }

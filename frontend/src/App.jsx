@@ -2,10 +2,11 @@ import Home from "./Pages/Home"
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
 import React, { useEffect } from 'react'
-import { useState } from 'react'
 import {authStore} from "./ZustandStore/store.js"
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import useclientSocket from "./Socket/useclientSocket.js"
+
 
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
     setauthUser(data.user)
   }
 
-    useEffect(()=>{
+  useEffect(()=>{
       verifyCookie()
   },[])
-  
+
+  useclientSocket() //now it will re-run as it has useEffect with dependency on authUser (only call once this hook)
 
   return (
     <>

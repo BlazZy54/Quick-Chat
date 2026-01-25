@@ -1,13 +1,11 @@
+import { useState } from 'react'
 import { create } from 'zustand'
-import toast from 'react-hot-toast'
-
 
 export const authStore = create((set) => ({
     authUser: null,
     setauthUser: (obj) => {
         set({authUser: obj})
-        toast.success("Changed user to " + (obj ? obj.fullName : "null"));
-        console.log(obj)
+        // toast.success("Changed user to " + (obj ? obj.fullName : "null"));
     },
 }))
 
@@ -19,3 +17,10 @@ export const conversationStore = create((set) => ({
     messages: [],
     setMessages: (msgs) => set({messages: msgs})
 }))
+
+export const socketStore = create((set) => ({
+  socket: null,
+  onlineUsers: [],
+  setSocket: (s) => set({ socket: s }),
+  setonlineUsers: (users) => set({ onlineUsers: users }),
+}));

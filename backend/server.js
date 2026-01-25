@@ -10,8 +10,9 @@ import messageRoutes from "./routes/message.routes.js"
 import userRoutes from "./routes/user.routes.js"
 import verifycookieRoutes from "./routes/verifycookie.routes.js"
 
+import {server, app} from './socket/socket.js'
 
-const app = express()
+// const app = express()
 const PORT = process.env.PORT || 3000
 
 dotenv.config()
@@ -25,7 +26,7 @@ app.use('/api/user', userRoutes)
 app.use('/api/verifycookie', verifycookieRoutes)
 
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     connToDB()
     console.log("Server running on http://localhost:" + PORT)
 })
