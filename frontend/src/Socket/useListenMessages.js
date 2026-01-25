@@ -8,39 +8,19 @@ const useListenMessages = () => {
     const { messages, setMessages } = conversationStore()
 
     useEffect(() => {
-        if (!socket) return;
-
-        //chatgpt
-        const handler = (new_msg) => {
-            setMessages((prev) => [...prev, new_msg]);
-            const sound = new Audio(noti_sound);
+        // socket.on() is used to listen to the events and can be used both on server side and on client side
+        socket?.on("NewMessage", (new_msg) => {
+            setMessages([...messages, new_msg])
+            new_msg.shouldShake = true
+            const sound = new Audio(noti_sound)
             sound.volume = 0.005;
-            sound.play();
-        };
+            sound.play()
+        })
 
-        socket.on("NewMessage", handler);
-
-        return () => socket.off("NewMessage", handler);
-    }, [socket]);
-
+        //cleanup function
+        return () => socket?.off("NewMessage")  //important
+    }, [socket, setMessages])
 
 }
 
 export default useListenMessages
-
-
-
-//og -> 
-// useEffect(() => {
-//     // socket.on() is used to listen to the events and can be used both on server side and on client side
-//     socket?.on("NewMessage", (new_msg) => {
-//         setMessages([...messages, new_msg])
-//         new_msg.shouldShake = true
-//         const sound = new Audio(noti_sound)
-//         sound.volume = 0.005;
-//         sound.play()
-//     })
-
-//     //cleanup function
-//     return () => socket?.off("NewMessage")  //important
-// }, [socket, setMessages])
