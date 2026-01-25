@@ -19,7 +19,7 @@ const useListenMessages = () => {
 
         //cleanup function
         return () => socket?.off("NewMessage")  //important
-    }, [socket, messages, setMessages])
+    }, [socket, setMessages])
 
 }
 
